@@ -91,7 +91,7 @@ function write_life_event(life_event) {
       week_div.classList.add("has-tooltip");
       week_div.dataset.tooltip = life_event['description'];
     }
-  
+
     if('icon' in life_event) {
         week_div.insertAdjacentHTML('beforeend', life_event['icon']);
     }
@@ -109,30 +109,36 @@ events = [
 
     */
     {
-        'date': new Date("1990-02-05"),
+        'date': new Date("1982-07-23"),
         'description': "I was born",
         'color': "#E1F5FE",
         'icon': "👶"
     },
     {
-        'date': new Date("2011-05-13"),
-        'description': "Started dating",
-        'color': "#FCE4EC",
-        'icon': "♥️"
-    },
-    {
-        'date': new Date("2012-06-30"),
+        'date': new Date("2012-07-30"),
         'description': "Graduated",
         'color': "#039BE5",
         // icons are now optional
         // 'icon': "🎓"
+    },
+    {
+        'date': new Date("2013-07-20"),
+        'description': "Married",
+        'color': "#FCE4EC",
+        'icon': "♥️"
+    },
+    {
+        'date': new Date("2013-12-01"),
+        'description': "Work da vida",
+        'color': "#FCE4EC",
+        'icon': "♥️"
     },
 ]
 
 
 
 let calendar = document.getElementById("calendar");
-populate_calendar(new Date("1990-06-16"), 60);
+populate_calendar(new Date("1982-07-23"), 80);
 
 events.forEach(e => {
     write_life_event(e);

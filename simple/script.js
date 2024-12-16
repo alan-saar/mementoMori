@@ -3,11 +3,11 @@ const cols_per_rect = get_css_variable("--cols-per-rect");
 
 let calendar = document.getElementById("calendar");
 
-const life_expectancy = 60;
+const life_expectancy = 80;
 let numDecades = Math.floor(life_expectancy / 10);
 populate_calendar(numDecades);
 
-// fill_calendar("16/12/1999");
+fill_calendar("23/07/1982");
 
 /**
 * Fill every week, counting from the given bday
@@ -127,6 +127,6 @@ document.getElementById("downloadBtn").addEventListener("click", () => {
             anchorTag.download = "mementoMori.png";
             anchorTag.href = canvas.toDataURL();
 			anchorTag.target = '_blank';
-			anchorTag.click(); 
+			anchorTag.click();
 		});
  });
